@@ -60,6 +60,11 @@ class MainActivity : AppCompatActivity() {
         btnView.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
+            intent.putStringArrayListExtra("Item_Names", ArrayList(itemNames))
+            intent.putStringArrayListExtra("Categories", ArrayList(categories))
+            intent.putStringArrayListExtra("Comments", ArrayList(comments))
+            intent.putIntegerArrayListExtra("Quantities", ArrayList(quantities))
+            startActivity(intent)
         }
         btnExit.setOnClickListener {
             finishAffinity()

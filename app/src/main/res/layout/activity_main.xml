@@ -15,39 +15,43 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="24dp"/>
 
     <EditText
         android:id="@+id/etItem"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="@string/hint_item"
         android:inputType="text"
+        android:layout_marginBottom="12dp"
         android:autofillHints="name"/>
 
     <EditText
         android:id="@+id/etCategory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="@string/category"
-        android:inputType="number"
+        android:inputType="text"
         android:autofillHints="name"
+        android:layout_marginBottom="12dp"
         android:layout_marginTop="10dp"/>
 
     <EditText
         android:id="@+id/etComments"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="@string/hint_comments"
         android:inputType="text"
+        android:layout_marginBottom="12dp"
         android:autofillHints="name"/>
 
     <EditText
         android:id="@+id/etQuantity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="@string/hint_quantity"
         android:autofillHints="name"
+        android:layout_marginBottom="12dp"
         android:inputType="number"/>
 
     <Button
@@ -55,21 +59,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_add"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <Button
         android:id="@+id/btnView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_View"
-        android:layout_marginTop="10dp"/>
+        android:height="48dp"
+        android:layout_marginBottom="12dp"/>
 
     <Button
         android:id="@+id/btnExit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/btn_Exit"
-        android:layout_marginTop="16dp"/>
+        android:height="48dp"
+        android:layout_marginBottom="12dp"/>
 
 
 </LinearLayout>

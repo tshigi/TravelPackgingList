@@ -11,15 +11,20 @@ class SecondActivity : AppCompatActivity() {
 
         val tvOutput = findViewById<TextView>(R.id.tvOutput)
 
-        if (MainActivity.itemNames.isEmpty()){
+        val itemNames = intent.getStringArrayListExtra("Item_Names")?: ArrayList()
+        val categories = intent.getStringArrayListExtra("Categories")?: ArrayList()
+        val comments = intent.getStringArrayListExtra("Comments")?: ArrayList()
+        val quantities = intent.getIntegerArrayListExtra("Quantities")?: ArrayList()
+
+        if (itemNames.isEmpty()){
             tvOutput.text = "No items added yet"
         }else{
             val sb = StringBuilder()
-            for (i in MainActivity.itemNames.indices){
-                sb.append(" -${i + 1}.${MainActivity.itemNames[1]}")
-                sb.append("-Qty: ${MainActivity.quantities[i]}")
-                if (MainActivity.comments[i].isNotEmpty()){
-                    sb.append("-${MainActivity.comments}")
+            for (i in itemNames.indices){
+                sb.append(" -${i + 1}.${itemNames[i]}\n")
+                sb.append("-Qty: ${quantities[i]}")
+                if (comments[i].isNotEmpty()){
+                    sb.append("-${comments}")
                 }
                 sb.append("/n/n")
             }
